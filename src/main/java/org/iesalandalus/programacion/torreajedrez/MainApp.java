@@ -103,7 +103,10 @@ public class MainApp {
 			break;
 		}
 		return direccion;
-
+	}
+	
+	private static void crearTorreDefecto() {
+		torre = new Torre();
 	}
 	
 	
