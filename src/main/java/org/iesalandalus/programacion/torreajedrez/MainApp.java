@@ -53,6 +53,15 @@ public class MainApp {
 		}
 	}
 	
+	private static char elegirColumnaInicial() {
+		char eleccionColumna = 'x';
+		do {
+		System.out.println("Por favor, seleccione la columna inicial 'a' o 'h'");
+		eleccionColumna=Entrada.caracter();
+		} while (eleccionColumna!='a' && eleccionColumna!='h');
+		return eleccionColumna;
+	}
+	
 	
 	
 	
