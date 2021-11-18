@@ -31,7 +31,7 @@ public class MainApp {
 	private static int elegirOpcion() {
 		int eleccion = 0;
 		do {
-		System.out.println("Por favor, elija una opción de entre las anteriores");
+		System.out.println("Por favor, elija una opción del Menú");
 		eleccion=Entrada.entero();
 		} while (eleccion<1 || eleccion>5);
 		return eleccion;
@@ -65,11 +65,45 @@ public class MainApp {
 	}
 	
 	private static void mostrarMenuDirecciones() {
-		System.out.println("Por favor, elija la dirección hacia la que quiere mover su torre:");
+		System.out.println("Menú Dirección");
+		System.out.println("----------------------------------");
 		System.out.println("1. Arriba");
 		System.out.println("2. Abajo");
 		System.out.println("3. Izquierda");
 		System.out.println("4. Derecha");
+		System.out.println("5. Enroque Corto");
+		System.out.println("6. Enroque Largo");
+	}
+	
+	private static Direccion elegirDireccion() {
+		Direccion direccion = null;
+		int eleccionDireccion = 0;
+		do {
+			System.out.println("Por favor, la dirección hacia la que se desea mover del Menú Dirección");
+			eleccionDireccion=Entrada.entero();
+		} while (eleccionDireccion<1 || eleccionDireccion>6);
+		switch (eleccionDireccion) {
+		case 1:
+			direccion = Direccion.ARRIBA;
+			break;
+		case 2:
+			direccion = Direccion.ABAJO;
+			break;
+		case 3:
+			direccion = Direccion.IZQUIERDA;
+			break;
+		case 4:
+			direccion = Direccion.DERECHA;
+			break;
+		case 5:
+			direccion = Direccion.ENROQUE_CORTO;
+			break;
+		case 6:
+			direccion = Direccion.ENROQUE_LARGO;
+			break;
+		}
+		return direccion;
+
 	}
 	
 	
