@@ -57,9 +57,19 @@ public class MainApp {
 		char eleccionColumna = 'x';
 		do {
 		System.out.println("Por favor, seleccione la columna inicial 'a' o 'h'");
-		eleccionColumna=Entrada.caracter();
+		eleccionColumna=Character.toLowerCase(Entrada.caracter());
+//		eleccionColumna=Entrada.caracter();
+//		eleccionColumna=Character.toLowerCase(eleccionColumna);
 		} while (eleccionColumna!='a' && eleccionColumna!='h');
 		return eleccionColumna;
+	}
+	
+	private static void mostrarMenuDirecciones() {
+		System.out.println("Por favor, elija la dirección hacia la que quiere mover su torre:");
+		System.out.println("1. Arriba");
+		System.out.println("2. Abajo");
+		System.out.println("3. Izquierda");
+		System.out.println("4. Derecha");
 	}
 	
 	
