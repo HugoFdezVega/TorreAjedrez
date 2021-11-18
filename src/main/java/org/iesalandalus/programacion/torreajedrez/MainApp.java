@@ -31,12 +31,12 @@ public class MainApp {
 	}
 	
 	private static int elegirOpcion() {
-		int eleccion = 0;
+		int eleccionMenu = 0;
 		do {
 		System.out.println("Por favor, elija una opción del Menú");
-		eleccion=Entrada.entero();
-		} while (eleccion<1 || eleccion>5);
-		return eleccion;
+		eleccionMenu=Entrada.entero();
+		} while (eleccionMenu<1 || eleccionMenu>5);
+		return eleccionMenu;
 	}
 	
 	private static Color elegirColor() {
@@ -138,6 +138,27 @@ public class MainApp {
 				System.out.println(e.getMessage());
 			}
 		}
+	}
+	
+	private static void ejecutarOpcion (int eleccionMenu) {
+		int elegirOpcion = eleccionMenu;
+		switch (elegirOpcion) {
+		case 1:
+			crearTorreDefecto();
+			break;
+		case 2:
+			crearTorreColor();
+			break;
+		case 3:
+			crearTorreColorColumna();
+			break;
+		case 4:
+			mover();
+			break;
+		case 5:
+			System.out.println("¡Que tengas un buen día!");
+		}
+		
 	}
 	
 	
